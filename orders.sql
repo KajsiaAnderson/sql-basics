@@ -17,6 +17,6 @@ SELECT * FROM orders
 
 SELECT SUM(quantity) FROM orders
 
-SELECT SUM(product_price) FROM orders
+SELECT SUM(product_price * quantity) FROM orders
 
-SELECT person_id, SUM(quantity) FROM orders GROUP BY person_id
+SELECT SUM(product_price * quantity) FROM orders WHERE person_id = 'jared'

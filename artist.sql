@@ -1,7 +1,7 @@
-INSERT INTO artist (artist_id, name)
-VALUES (555, 'Harry Mack'),
-(556, 'austin waltershire sauce'),
-(557, 'kaysia k')
+INSERT INTO artist (name)
+VALUES ('Harry Mack'),
+('austin waltershire sauce'),
+('kaysia k')
 
 SELECT * FROM artist
 
