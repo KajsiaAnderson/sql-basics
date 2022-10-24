@@ -1,17 +1,17 @@
 CREATE TABLE orders(
   order_id SERIAL PRIMARY KEY,
-  person_id VARCHAR(40),
+  person_id INT,
   product_name VARCHAR(40),
   product_price INT,
   quantity INT
   )
 
 INSERT INTO orders (person_id, product_name, product_price, quantity)
-VALUES ('bob', 'potato', 4.50, 1),
-('betty', 'sandwich', 2, 2),
-('austin', 'worcestershire sauce', 10, 5),
-('jared', 'tv', 11, 1),
-('jared', 'muffins', 8, 4);
+VALUES (1, 'potato', 4.50, 1),
+(2, 'sandwich', 2, 2),
+(3, 'worcestershire sauce', 10, 5),
+(4, 'tv', 11, 1),
+(4, 'muffins', 8, 4);
 
 SELECT * FROM orders
 
@@ -19,4 +19,4 @@ SELECT SUM(quantity) FROM orders
 
 SELECT SUM(product_price * quantity) FROM orders
 
-SELECT SUM(product_price * quantity) FROM orders WHERE person_id = 'jared'
+SELECT SUM(product_price * quantity) FROM orders WHERE person_id = 4
